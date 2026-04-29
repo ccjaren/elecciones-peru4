@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elecciones Perú 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo_nuevo.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="brand-escudo">🇵🇪</span>
+            <div>
+                <div class="brand-title">PERÚ ELIGE 2026</div>
+                <div class="brand-sub">Elecciones Generales</div>
+            </div>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html" class="nav-link active">Inicio</a>
+
+            <!-- CANDIDATOS Presidenciales submenu -->
+            <div class="nav-item has-submenu">
+                <button class="nav-link submenu-toggle">
+                    Presidencia <span class="arrow">▾</span>
+                </button>
+                <div class="submenu">
+                    <a href="presidenciales.html" class="submenu-link">
+                        <span class="sub-icon">🏛️</span> Todos los candidatos
+                    </a>
+                    <a href="presidenciales.html#fuerza-popular" class="submenu-link">
+                        <span class="sub-icon">🔴</span> Fuerza Popular
+                    </a>
+                    <a href="presidenciales.html#juntos-peru" class="submenu-link">
+                        <span class="sub-icon">🟡</span> Juntos por el Perú
+                    </a>
+                    <a href="presidenciales.html#renovacion" class="submenu-link">
+                        <span class="sub-icon">🔵</span> Renovación Popular
+                    </a>
+                </div>
+            </div>
+
+            <!-- CONGRESO submenu -->
+            <div class="nav-item has-submenu">
+                <button class="nav-link submenu-toggle">
+                    Congreso <span class="arrow">▾</span>
+                </button>
+                <div class="submenu">
+                    <a href="diputados.html" class="submenu-link">
+                        <span class="sub-icon">🏠</span> Diputados
+                    </a>
+                    <a href="senadores.html" class="submenu-link">
+                        <span class="sub-icon">⚖️</span> Senadores
+                    </a>
+                    <a href="parlamentoandino.html" class="submenu-link">
+                        <span class="sub-icon">🌎</span> Parlamento Andino
+                    </a>
+                </div>
+            </div>
+
+            <a href="#formulario" class="nav-link">Consultas</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">REPÚBLICA DEL PERÚ</div>
+            <h1 class="hero-title">Elecciones<br><em>Generales</em><br>2026</h1>
+            <p class="hero-desc">Información oficial sobre candidatos a la Presidencia, Congreso de la República y Parlamento Andino.</p>
+            <div class="hero-ctas">
+                <a href="presidenciales.html" class="btn-primary">Ver candidatos presidenciales</a>
+                <a href="#formulario" class="btn-secondary">Hacer una consulta</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num">10+</span><span class="stat-lbl">Candidatos</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">32</span><span class="stat-lbl">Diputados</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">25</span><span class="stat-lbl">Senadores</span></div>
+        </div>
+    </section>
+
+    <!-- CARRUSEL CANDIDATOS -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Candidatos a la Presidencia</h2>
+            <p>Principales postulantes para las elecciones generales 2026</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <!-- Botón anterior -->
+            <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Anterior">&#8249;</button>
+
+            <!-- Pista de slides -->
+            <div class="carousel-track-outer">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="carousel-slide">
+                        <div class="card-candidato">
+                            <div class="card-img-wrap">
+                                <img src="presidentes/keiko.jpg" alt="Keiko Fujimori" onerror="this.src='https://ui-avatars.com/api/?name=Keiko+Fujimori&background=c0392b&color=fff&size=200'">
+                                <div class="card-partido-badge" style="--c:#c0392b">Fuerza Popular</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Keiko Fujimori</h3>
+                                <p>Lidera la primera vuelta buscando la presidencia por cuarta vez. Plataforma de «mano dura» y estabilidad económica.</p>
+                                <a href="presidenciales.html" class="card-link">Ver perfil →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="card-candidato">
+                            <div class="card-img-wrap">
+                                <img src="presidentes/roberto.jpg" alt="Roberto Sánchez" onerror="this.src='https://ui-avatars.com/api/?name=Roberto+Sanchez&background=e67e00&color=fff&size=200'">
+                                <div class="card-partido-badge" style="--c:#e67e00">Juntos por el Perú</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Roberto Sánchez</h3>
+                                <p>Candidato de izquierda, disputa el pase a segunda vuelta. Se posiciona como heredero político de Pedro Castillo.</p>
+                                <a href="presidenciales.html" class="card-link">Ver perfil →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="card-candidato">
+                            <div class="card-img-wrap">
+                                <img src="presidentes/rafael.webp" alt="Rafael López Aliaga" onerror="this.src='https://ui-avatars.com/api/?name=Rafael+Lopez&background=185FA5&color=fff&size=200'">
+                                <div class="card-partido-badge" style="--c:#185FA5">Renovación Popular</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Rafael López Aliaga</h3>
+                                <p>Exalcalde de Lima con postura ultraconservadora. Basa su campaña en seguridad y control migratorio.</p>
+                                <a href="presidenciales.html" class="card-link">Ver perfil →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Botón siguiente -->
+            <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Siguiente">&#8250;</button>
+        </div>
+
+        <!-- Puntos indicadores -->
+        <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="carousel-progress-bar">
+            <div class="carousel-progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="section-cta">
+            <a href="presidenciales.html" class="btn-primary">Ver todos los candidatos</a>
+        </div>
+    </section>
+
+    <!-- ACCESOS RÁPIDOS -->
+    <section class="section section-dark">
+        <div class="section-header light">
+            <h2>Accesos Rápidos</h2>
+            <p>Información por tipo de cargo</p>
+        </div>
+        <div class="quick-links">
+            <a href="diputados.html" class="quick-card">
+                <div class="quick-icon">🏠</div>
+                <div class="quick-title">Diputados</div>
+                <div class="quick-sub">32 candidatos – Avanza País</div>
+            </a>
+            <a href="senadores.html" class="quick-card">
+                <div class="quick-icon">⚖️</div>
+                <div class="quick-title">Senadores</div>
+                <div class="quick-sub">25 candidatos – Avanza País</div>
+            </a>
+            <a href="parlamentoandino.html" class="quick-card">
+                <div class="quick-icon">🌎</div>
+                <div class="quick-title">Parlamento Andino</div>
+                <div class="quick-sub">5 candidatos – Avanza País</div>
+            </a>
+            <a href="presidenciales.html" class="quick-card">
+                <div class="quick-icon">🏛️</div>
+                <div class="quick-title">Presidencia</div>
+                <div class="quick-sub">10+ candidatos presidenciales</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="section" id="formulario">
+        <div class="section-header">
+            <h2>Formulario de Consultas</h2>
+            <p>¿Tienes dudas sobre el proceso electoral? Envíanos tu consulta</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-info">
+                <h3>¿En qué podemos ayudarte?</h3>
+                <ul class="form-info-list">
+                    <li>📋 Información sobre candidatos</li>
+                    <li>📅 Fechas y cronograma electoral</li>
+                    <li>🗳️ Proceso de votación</li>
+                    <li>📍 Ubicación de centros de votación</li>
+                    <li>📞 Denuncias electorales</li>
+                </ul>
+                <div class="form-contacto">
+                    <div class="contacto-item">
+                        <strong>📧 Email</strong>
+                        <span>consultas@peruelige2026.pe</span>
+                    </div>
+                    <div class="contacto-item">
+                        <strong>📞 Teléfono</strong>
+                        <span>(01) 417-0630</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="form" id="consultaForm" onsubmit="enviarFormulario(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombres">Nombres y Apellidos *</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Ej: Juan Pérez García" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI *</label>
+                        <input type="text" id="dni" name="dni" placeholder="12345678" maxlength="8" pattern="[0-9]{8}" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="999 999 999">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="region">Región / Departamento *</label>
+                    <select id="region" name="region" required>
+                        <option value="">-- Selecciona tu región --</option>
+                        <option>Amazonas</option><option>Áncash</option><option>Apurímac</option>
+                        <option>Arequipa</option><option>Ayacucho</option><option>Cajamarca</option>
+                        <option>Callao</option><option>Cusco</option><option>Huancavelica</option>
+                        <option>Huánuco</option><option>Ica</option><option>Junín</option>
+                        <option>La Libertad</option><option>Lambayeque</option><option selected>Lima</option>
+                        <option>Loreto</option><option>Madre de Dios</option><option>Moquegua</option>
+                        <option>Pasco</option><option>Piura</option><option>Puno</option>
+                        <option>San Martín</option><option>Tacna</option><option>Tumbes</option>
+                        <option>Ucayali</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de consulta *</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">-- Selecciona el tipo --</option>
+                        <option>Información sobre candidatos</option>
+                        <option>Cronograma electoral</option>
+                        <option>Proceso de votación</option>
+                        <option>Centro de votación</option>
+                        <option>Denuncia electoral</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje / Consulta *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe detalladamente tu consulta..." required></textarea>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto que mis datos sean usados para responder esta consulta, conforme a la Ley N° 29733 de Protección de Datos Personales.</label>
+                </div>
+
+                <button type="submit" class="btn-form">Enviar Consulta</button>
+
+                <div class="form-success" id="formSuccess" style="display:none">
+                    ✅ ¡Consulta enviada con éxito! Te responderemos en 24–48 horas hábiles.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">🇵🇪 PERÚ ELIGE 2026</div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="presidenciales.html">Presidencia</a>
+                <a href="diputados.html">Diputados</a>
+                <a href="senadores.html">Senadores</a>
+                <a href="parlamentoandino.html">Parlamento Andino</a>
+            </div>
+            <div class="footer-copy">© 2026 Información Electoral – Perú. Solo con fines informativos.</div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Navbar hamburger ──
+        const hamburger = document.getElementById('hamburger');
+        const navMenu   = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+
+        // ── Submenús ──
+        document.querySelectorAll('.submenu-toggle').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const parent = btn.closest('.has-submenu');
+                const isOpen = parent.classList.contains('open');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+                if (!isOpen) parent.classList.add('open');
+            });
+        });
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+        });
+
+        // ── Formulario ──
+        function enviarFormulario(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-form');
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            setTimeout(() => {
+                document.getElementById('formSuccess').style.display = 'block';
+                btn.textContent = 'Enviado ✓';
+                e.target.reset();
+            }, 1200);
+        }
+
+        // ── Navbar scroll ──
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ── CARRUSEL ──
+        const slides       = document.querySelectorAll('.carousel-slide');
+        const dots         = document.querySelectorAll('.dot');
+        const progressFill = document.getElementById('progressFill');
+        const TOTAL        = slides.length;
+        const INTERVAL_MS  = 3000;
+        let current        = 0;
+        let timer          = null;
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (index + TOTAL) % TOTAL;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+            // reinicia la animación de la barra
+            progressFill.style.transition = 'none';
+            progressFill.style.width = '0%';
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    progressFill.style.transition = `width ${INTERVAL_MS}ms linear`;
+                    progressFill.style.width = '100%';
+                });
+            });
+        }
+
+        function startTimer() {
+            clearInterval(timer);
+            timer = setInterval(() => goTo(current + 1), INTERVAL_MS);
+        }
+
+        // Botones
+        document.getElementById('prevBtn').addEventListener('click', () => { goTo(current - 1); startTimer(); });
+        document.getElementById('nextBtn').addEventListener('click', () => { goTo(current + 1); startTimer(); });
+
+        // Puntos
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => { goTo(+dot.dataset.index); startTimer(); });
+        });
+
+        // Swipe táctil
+        let touchStartX = 0;
+        const track = document.getElementById('carouselTrack');
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend',   e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); startTimer(); }
+        });
+
+        // Inicio
+        goTo(0);
+        startTimer();
+    </script>
+
+</body>
+</html>

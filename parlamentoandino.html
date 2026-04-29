@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo_nuevo.css">
+    <title>Parlamento Andino – Avanza País 2026</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-brand">
+            <span class="brand-escudo">🇵🇪</span>
+            <div>
+                <div class="brand-title">PERÚ ELIGE 2026</div>
+                <div class="brand-sub">Elecciones Generales</div>
+            </div>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <div class="nav-item has-submenu">
+                <button class="nav-link submenu-toggle">Presidencia <span class="arrow">▾</span></button>
+                <div class="submenu">
+                    <a href="presidenciales.html" class="submenu-link"><span class="sub-icon">🏛️</span> Todos los candidatos</a>
+                </div>
+            </div>
+            <div class="nav-item has-submenu">
+                <button class="nav-link submenu-toggle active">Congreso <span class="arrow">▾</span></button>
+                <div class="submenu">
+                    <a href="diputados.html" class="submenu-link"><span class="sub-icon">🏠</span> Diputados</a>
+                    <a href="senadores.html" class="submenu-link"><span class="sub-icon">⚖️</span> Senadores</a>
+                    <a href="parlamentoandino.html" class="submenu-link"><span class="sub-icon">🌎</span> Parlamento Andino</a>
+                </div>
+            </div>
+            <a href="index.html#formulario" class="nav-link">Consultas</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>🌎 Candidatos – Parlamento Andino</h1>
+        <p>Avanza País – Elecciones Generales 2026</p>
+    </div>
+
+    <div class="page-body">
+        <ul class="candidate-list">
+            <li>YESSICA ROSSELLI AMURUZ DULANTO</li>
+            <li>MANUEL FRANCISCO GASCO CRUZ</li>
+            <li>JOANNA STEPHANIE CORRALES CHOQQUE</li>
+            <li>KARLA VANESA RIERA RODRIGUEZ</li>
+            <li>MILAGROS ANTUANET RODRIGUEZ GALLEGOS</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr><th>Nombres</th><th>Partido</th><th>Foto</th><th>Profesión</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>YESSICA ROSSELLI AMURUZ DULANTO</td><td>Avanza País</td><td><img src="parlamento/yessica1.jpg" alt="Yessica"></td><td>Abogada</td></tr>
+                <tr><td>MANUEL FRANCISCO GASCO CRUZ</td><td>Avanza País</td><td><img src="parlamento/manuel.jpg" alt="Manuel"></td><td>Negocios Internacionales</td></tr>
+                <tr><td>JOANNA STEPHANIE CORRALES CHOQQUE</td><td>Avanza País</td><td><img src="parlamento/joana.jpg" alt="Joanna"></td><td>No Declarado</td></tr>
+                <tr><td>KARLA VANESA RIERA RODRIGUEZ</td><td>Avanza País</td><td><img src="parlamento/karla.jpg" alt="Karla"></td><td>No Registrado</td></tr>
+                <tr><td>MILAGROS ANTUANET RODRIGUEZ GALLEGOS</td><td>Avanza País</td><td><img src="parlamento/milagros.jpg" alt="Milagros"></td><td>No Registrado</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">🇵🇪 PERÚ ELIGE 2026</div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a><a href="presidenciales.html">Presidencia</a>
+                <a href="diputados.html">Diputados</a><a href="senadores.html">Senadores</a>
+                <a href="parlamentoandino.html">Parlamento Andino</a>
+            </div>
+            <div class="footer-copy">© 2026 Información Electoral – Solo fines informativos.</div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => { navMenu.classList.toggle('open'); hamburger.classList.toggle('active'); });
+        document.querySelectorAll('.submenu-toggle').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const parent = btn.closest('.has-submenu');
+                const isOpen = parent.classList.contains('open');
+                document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open'));
+                if (!isOpen) parent.classList.add('open');
+            });
+        });
+        document.addEventListener('click', () => { document.querySelectorAll('.has-submenu').forEach(el => el.classList.remove('open')); });
+        window.addEventListener('scroll', () => { document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50); });
+    </script>
+</body>
+</html>
